@@ -1,18 +1,12 @@
 FROM nginx
-
 COPY html /usr/share/nginx/html
 
+RUN echo 'installing docker inside docker'
 FROM  openjdk:8
-
-# Install your dependencies
-# ...
-
-# Install curl
 RUN apt-get update && apt-get install -y \
   curl \
   && rm -rf /var/lib/apt/lists/*
-
-# Install docker client    
+ 
 ENV DOCKER_CHANNEL stable
 ENV DOCKER_VERSION 17.03.1-ce
 ENV DOCKER_API_VERSION 1.27
