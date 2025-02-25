@@ -1,4 +1,4 @@
 FROM nginx
 COPY html /usr/share/nginx/html
-RUN ls -ln /
-RUN chmod 775 /
+
+RUN apt-get update && apt-get install -y sudo
