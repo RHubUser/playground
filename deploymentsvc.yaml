@@ -16,7 +16,7 @@ spec:
       containers:
       - name: playground-deployment
         image: rdockeruser/playground
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 
